@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Svg from '../../components/Svg';
-import ScrollBtn from '../../components/ScrollBtn';
+import ScrollBtn from '../../components/ScrollBtn/ScrollBtn';
 import { Wrapper } from './LandingElements';
 
 const Landing = () => {

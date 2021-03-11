@@ -2,17 +2,14 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   margin-top: 5%;
-  height: 200px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  height: 150px;
+
+  /* background: #e9d758; */
+  background: #e6e6e6;
 
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  max-width: 1200px;
   width: 100%;
 
   @mixin white-gradient {
@@ -45,9 +42,9 @@ export const Wrapper = styled.div`
   }
 
   .slide-track {
-    animation: scroll 20s linear infinite;
+    animation: scroll 5s linear infinite;
     display: flex;
-    width: calc(140px * 12);
+    width: calc(150px * 12);
   }
 
   .slide {
@@ -56,9 +53,10 @@ export const Wrapper = styled.div`
   }
 
   img {
-    height: 180px;
-    width: 170px;
-    padding: 30px;
+    height: 150px;
+    width: 155px;
+    padding: 30px 20px;
+    margin-left: 40px;
   }
 
   /* < 830px */
@@ -71,7 +69,7 @@ export const Wrapper = styled.div`
     img {
       height: 160px;
       width: 150px;
-      padding: 20px;
+      padding: 20px 15px;
     }
   }
 
@@ -94,7 +92,7 @@ export const Wrapper = styled.div`
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-140px * 6));
+      transform: translateX(calc(-150px * 4));
     }
   }
 `;
