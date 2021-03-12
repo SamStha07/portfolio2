@@ -1,11 +1,11 @@
 import React from 'react';
-
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import { ToastContainer } from 'react-toastify';
-import { toastifySuccess, toastifyError } from '../ToastifyNotifications';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Wrapper } from './ContactFormElements';
+import { toastifyError, toastifySuccess } from '../ToastifyNotifications';
 
 const SERVICE_ID = 'service_q0ygmxc';
 const TEMPLATE_ID = 'template_kpa7ulb';
@@ -27,13 +27,15 @@ const ContactForm = () => {
       reset();
       toastifySuccess();
     } catch (e) {
+      // console.log(e);
       toastifyError();
-      console.log(e);
     }
   };
 
   return (
     <Wrapper>
+      <ToastContainer />
+
       <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
         <input
           type='text'
@@ -105,11 +107,9 @@ const ContactForm = () => {
         )}
 
         <button className='submit-btn' type='submit'>
-          Submit
+          <span>Submit</span>
         </button>
       </form>
-
-      <ToastContainer />
     </Wrapper>
   );
 };

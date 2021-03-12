@@ -12,13 +12,14 @@ export const Wrapper = styled.div`
     height: 3em;
     padding: 1rem;
     margin-top: 1rem;
-    color: black;
-    border: 2px solid black;
+    border: 2px solid green;
+    color: white;
     border-radius: 4px;
+    background: black;
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 10px #ffffffff;
+      box-shadow: 0 0 10px green;
     }
   }
 
@@ -35,14 +36,21 @@ export const Wrapper = styled.div`
   button {
     width: 100%;
     margin-top: 0.5rem;
-    background: blue;
-    border: 2px solid black;
+    background: black;
+    border: 2px solid green;
     border-radius: 4px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 0.25em;
-    opacity: 0.8;
     cursor: pointer;
+
+    span {
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
 
     &:hover {
       transition: 0.5s ease-in;

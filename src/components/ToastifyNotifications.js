@@ -1,25 +1,25 @@
 import { toast } from 'react-toastify';
 
 export const toastifySuccess = () => {
-  toast.success('Form sent!', {
-    position: 'top-right',
-    autoClose: 4000,
+  toast.success('🦄 Email sent!', {
+    position: 'bottom-right',
+    autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
-    type: 'success',
+    progress: undefined,
   });
 };
 
 export const toastifyError = () => {
-  toast.error('Error occured!', {
-    position: 'top-right',
-    autoClose: 4000,
+  toast.error('🦄 Error occurred!', {
+    position: 'bottom-right',
+    autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
-    type: 'error',
+    progress: undefined,
   });
 };
