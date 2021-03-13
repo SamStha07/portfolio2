@@ -3,10 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   margin-top: 5%;
   height: 150px;
-
-  /* background: #e9d758; */
   background: #e6e6e6;
-
   overflow: hidden;
   position: relative;
   margin: 0 auto;
@@ -45,6 +42,8 @@ export const Wrapper = styled.div`
     animation: scroll 5s linear infinite;
     display: flex;
     width: calc(150px * 12);
+    /* flex-direction: row;
+    align-items: center; */
   }
 
   .slide {
@@ -84,6 +83,18 @@ export const Wrapper = styled.div`
       width: 130px;
       padding: 20px;
     }
+  }
+
+  @media (max-width: 300px) {
+    .slide {
+      height: 120px;
+      width: 100px;
+    }
+    /* img {
+      height: 120px;
+      width: 100px;
+      padding: 20px;
+    } */
   }
 
   // Animation

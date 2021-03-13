@@ -6,55 +6,75 @@ export const Wrapper = styled.div`
   opacity: 0.8;
   margin-top: 2rem;
 
-  input,
-  textarea {
-    width: 100%;
-    height: 3em;
-    padding: 1rem;
-    margin-top: 1rem;
-    border: 2px solid green;
-    color: white;
-    border-radius: 4px;
-    background: black;
+  .contact-form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 10px green;
-    }
-  }
+    .formInput {
+      vertical-align: middle;
+      margin: 10px;
+      padding: 10px;
+      width: 100%;
+      border: 2px solid green;
+      background: transparent;
+      border-radius: 4px;
+      color: white;
 
-  .errorMessage {
-    color: red;
-    opacity: 0.9;
-    font-size: 0.8rem;
-  }
-
-  textarea {
-    height: 20vh;
-  }
-
-  button {
-    width: 100%;
-    margin-top: 0.5rem;
-    background: black;
-    border: 2px solid green;
-    border-radius: 4px;
-    color: white;
-    font-size: 1.3rem;
-    padding: 0.25em;
-    cursor: pointer;
-
-    span {
-      opacity: 0.5;
-
-      &:hover {
-        opacity: 0.8;
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 10px green;
       }
     }
 
-    &:hover {
-      transition: 0.5s ease-in;
-      opacity: 1;
+    .formInput.message {
+      height: 7rem;
+    }
+
+    .errorMessage {
+      position: relative;
+      color: red;
+      opacity: 0.9;
+      font-size: 0.8rem;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin: 10px;
+      background: black;
+      border: 2px solid green;
+      border-radius: 4px;
+      color: white;
+      font-size: 1.3rem;
+      padding: 0.25em;
+      cursor: pointer;
+
+      span {
+        opacity: 0.5;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      &:hover {
+        transition: 0.5s ease-in;
+        opacity: 1;
+      }
+    }
+  }
+
+  /* < 830px */
+  @media (max-width: 400px) {
+    .contact-form {
+      .errorMessage {
+        font-size: 0.6rem;
+      }
+
+      .submit-btn {
+        font-size: 1rem;
+      }
     }
   }
 `;

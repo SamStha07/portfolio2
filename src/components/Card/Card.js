@@ -2,15 +2,26 @@ import React from 'react';
 
 import { Wrapper } from './CardElements';
 
-const Card = ({ name, img, demoLink, codeLink }) => {
+const Card = ({
+  name,
+  imgStatic,
+  imgActive,
+  description,
+  demoLink,
+  codeLink,
+  // disabled,
+}) => {
   return (
     <Wrapper>
       <div className='project-card'>
         <div className='content-overlay'></div>
 
-        <img src={img} alt='' />
+        <img className='static' src={imgStatic} alt='' />
+        <img className='active' src={imgActive} alt='' />
 
         <div className='project-name'>{name}</div>
+
+        <div className='description'>{description}</div>
 
         <div className='project-links'>
           <button className='left'>

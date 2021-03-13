@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  height: 100vh;
+  /* height: 100vh; */
   margin: auto;
   max-width: 1400px;
 
@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
     padding-top: 2rem;
 
     flex-wrap: wrap;
-    flex-basis: auto;
+    /* flex-flow: row wrap; */
+    /* flex-basis: auto; */
   }
 `;

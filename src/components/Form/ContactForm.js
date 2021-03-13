@@ -36,7 +36,11 @@ const ContactForm = () => {
     <Wrapper>
       <ToastContainer />
 
-      <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
+      <form
+        className='contact-form'
+        onSubmit={handleSubmit(onSubmit)}
+        noValidate
+      >
         <input
           type='text'
           name='name'
@@ -50,7 +54,7 @@ const ContactForm = () => {
               message: 'Please use 30 characters or less',
             },
           })}
-          className='form-control formInput'
+          className='formInput'
           placeholder='Name'
         ></input>
         {errors.name && (
@@ -64,7 +68,7 @@ const ContactForm = () => {
             required: true,
             pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
           })}
-          className='form-control formInput'
+          className='formInput'
           placeholder='Email address'
         ></input>
         {errors.email && (
@@ -86,7 +90,7 @@ const ContactForm = () => {
               message: 'Subject cannot exceed 75 characters',
             },
           })}
-          className='form-control formInput'
+          className='formInput'
           placeholder='Subject'
         ></input>
         {errors.subject && (
@@ -99,7 +103,7 @@ const ContactForm = () => {
           ref={register({
             required: true,
           })}
-          className='form-control formInput'
+          className='formInput message'
           placeholder='Message'
         ></textarea>
         {errors.message && (

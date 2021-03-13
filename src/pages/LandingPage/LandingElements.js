@@ -86,5 +86,15 @@ export const Wrapper = styled.div`
     .right-items {
       display: none;
     }
+
+    .left-items {
+      p {
+        font-size: 1.1em;
+      }
+    }
+
+    .btn-work {
+      font-size: 0.9em;
+    }
   }
 `;
